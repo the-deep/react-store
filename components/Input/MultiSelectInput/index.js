@@ -84,6 +84,9 @@ const filterAndSortOptions = ({
     value,
     labelSelector,
 }) => {
+    if (!value) {
+        return options;
+    }
     const newOptions = options.filter(
         option => caseInsensitiveSubmatch(
             labelSelector(option),
