@@ -6,6 +6,12 @@ import { formatDate } from './date';
 
 // CHECKER
 
+export const isNotDefined = val => (
+    val === undefined || val === null || Number.isNaN(val)
+);
+
+export const isDefined = val => !isNotDefined(val);
+
 export const isFalsy = val => (
     val === undefined || val === null || Number.isNaN(val) || val === false
 );
